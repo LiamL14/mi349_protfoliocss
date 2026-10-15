@@ -7,3 +7,5 @@ Sections: Home, About, Projects, Contacts
 Technology Used: HTML5 and CSS
 
 Live site hosted on Netlify
+
+Website is compatible with any time of device.
