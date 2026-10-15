@@ -4,6 +4,9 @@
     --background-color: #f0f4f8;
     --text-color: #1e293b; 
     --light-color: #ffffff;
+    --page-margin: 1rem;
+    --max-width: 1100px;
+    --card-radius: 10px;
     }
 
    * {
@@ -18,20 +21,32 @@
         font-family: Georgia, serif;
         font-size: 16px;
         line-height: 1.7;
+        text-align: center;
     }
 
     header {
         background-color: var(--primary-color);
         padding: 20px 40px;
+        border-bottom: 3px solid var(--accent-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 
     nav ul {
         list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
         display: inline;
-        margin-right: 24px;
+        margin-right: 0;
     }
 
     nav ul li a {
@@ -51,6 +66,8 @@
         color: var(--light-color);
         padding: 80px 40px;
         text-align: center;
+        width: 100%;
+        max-width: 100%;
     }
 
     h1 {
@@ -108,11 +125,21 @@
         padding: 40px;
         max-width: 900px;
         margin: 40px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     address {
         font-style: normal;
         line-height: 2;
+        border: 2px solid var(--accent-color);
+        border-radius: var(--card-radius);
+        padding: 1rem 2rem;
+        display: inline-block;
+        margin-top: 1rem;
+        background: var(--light-color);
+        text-align: left;
     }
 
     address a {
@@ -130,4 +157,5 @@
         text-align: center;
         padding: 20px;
         font-size: 14px;
+        border-top: 3px solid var(--accent-color)
     }
