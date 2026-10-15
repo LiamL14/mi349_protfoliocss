@@ -159,3 +159,69 @@
         font-size: 14px;
         border-top: 3px solid var(--accent-color)
     }
+
+/* AI Disclosure
+Prompt sent to my AI of choosing, which was Claude AI:
+I have an exisiting CSS file with multiple properities for a website of a portfolio of myself. 
+Can you assist with helping scale down the website so that it is compatible with a mobile phone?
+DO NOT edit or adjust the HTML file at all.
+Output from Claude: 
+Claude wrote three mobile-first media queries using min-width at 480px, 768px, and 1024px that
+expand the layout as the screen gets bigger. The projects section was given CSS
+Grid starting as one column on mobile, expanding to two columns at 768px and
+three columns at 1024px. Text alignment was set to center on mobile and switches
+to left aligned at 768px for larger screens.*/
+
+@media (min-width: 480px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul {
+        flex-direction: row;
+        gap: 16px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        text-align: left;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    section {
+        padding: 60px 40px;
+    }
+    section#intro {
+        padding: 80px 40px;
+        text-align: center;
+    }
+    section#projects {
+        grid-template-columns: 1fr 1fr;
+        padding: 40px;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+ 
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 56px;
+    }
+    section#projects {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1100px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
