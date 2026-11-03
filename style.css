@@ -1,6 +1,6 @@
  :root{
     --primary-color: #0f172a; 
-    --accent-color: #3b82f6; 
+    --accent-color: #1d4ed8; 
     --background-color: #f0f4f8;
     --text-color: #1e293b; 
     --light-color: #ffffff;
@@ -153,7 +153,7 @@
 
     footer {
         background-color: var(--primary-color);
-        color: var(--light-color);
+        color: var(--backround-color);
         text-align: center;
         padding: 20px;
         font-size: 14px;
