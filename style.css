@@ -160,6 +160,9 @@
         border-top: 3px solid var(--accent-color)
     }
 
+    footer p {
+        color: var(--light-color);
+    }
 /* AI Disclosure
 Prompt sent to my AI of choosing, which was Claude AI:
 I have an exisiting CSS file with multiple properities for a website of a portfolio of myself. 
