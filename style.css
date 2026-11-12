@@ -9,160 +9,174 @@
     --card-radius: 10px;
     }
 
+[data-theme="dark"] {
+    --primary-color: #556fe3;
+    --accent-color: #67acf2;
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --surface-color: #1e293b;
+    --heading-color: #f1f5f9;
+    --light-color: #1e293b;
+}
+
    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
    }
 
-    body {
-        background-color: var(--background-color);
-        color: var(--text-color);
-        font-family: Georgia, serif;
-        font-size: 16px;
-        line-height: 1.7;
-        text-align: center;
-    }
+body, header, section, footer, address, h2, h3, p {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
 
-    header {
-        background-color: var(--primary-color);
-        padding: 20px 40px;
-        border-bottom: 3px solid var(--accent-color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding: 0;
-        margin: 0;
-    }
+header {
+    background-color: var(--primary-color);
+    padding: 20px 40px;
+    border-bottom: 3px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
 
-    nav ul li {
-        display: inline;
-        margin-right: 0;
-    }
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
 
-    nav ul li a {
-        color: var(--light-color);
-        text-decoration: none;
-        font-size: 15px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
+nav ul li {
+    display: inline;
+    margin-right: 0;
+}
 
-    nav ul li a:hover {
-        color: var(--accent-color);
-    }
+nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
-    section#intro {
-        background-color: var(--primary-color);
-        color: var(--light-color);
-        padding: 80px 40px;
-        text-align: center;
-        width: 100%;
-        max-width: 100%;
-    }
+nav ul li a:hover {
+    color: var(--accent-color);
+}
 
-    h1 {
-        font-size: 48px;
-        margin-bottom: 16px;
-        color: var(--light-color);
-    }
+section#intro {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 80px 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
 
-    h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        color: var(--primary-color);
-        border-bottom: 3px solid var(--accent-color);
-        padding-bottom: 8px;
-        display: inline-block;
-    }
+h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: var(--light-color);
+}
 
-    h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        color: var(--accent-color);
-    }
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 8px;
+    display: inline-block;
+}
 
-    section {
-        padding: 60px 40px;
-        max-width: 900px;
-        margin: 0 auto;
-    }
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
 
-    p {
-        margin-bottom: 16px;
-        font-size: 16px;
-        color: var(--text-color);
-    }
+section {
+    padding: 60px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-    section#intro p {
-        font-size: 18px;
-        color: var(--background-color);
-    }
+p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: var(--text-color);
+}
 
-    img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        display: block;
-        margin: 24px auto;
-        border: 4px solid var(--accent-color);
-    }
+section#intro p {
+    font-size: 18px;
+    color: var(--background-color);
+}
 
-    section#projects {
-        background-color: var(--light-color);
-        border-left: 4px solid var(--accent-color);
-        border-radius: 4px;
-        padding: 40px;
-        max-width: 900px;
-        margin: 40px auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 24px auto;
+    border: 4px solid var(--accent-color);
+}
 
-    address {
-        font-style: normal;
-        line-height: 2;
-        border: 2px solid var(--accent-color);
-        border-radius: var(--card-radius);
-        padding: 1rem 2rem;
-        display: inline-block;
-        margin-top: 1rem;
-        background: var(--light-color);
-        text-align: left;
-    }
+section#projects {
+    background-color: var(--light-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
 
-    address a {
-        color: var(--accent-color);
-        text-decoration: none;
-    }
+address {
+    font-style: normal;
+    line-height: 2;
+    border: 2px solid var(--accent-color);
+    border-radius: var(--card-radius);
+    padding: 1rem 2rem;
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--light-color);
+    text-align: left;
+}
 
-    address a:hover {
-        text-decoration: underline;
-    }
+address a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
 
-    footer {
-        background-color: var(--primary-color);
-        color: var(--light-color);
-        text-align: center;
-        padding: 20px;
-        font-size: 14px;
-        border-top: 3px solid var(--accent-color)
-    }
+address a:hover {
+    text-decoration: underline;
+}
 
-    footer p {
-        color: var(--light-color);
-    }
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 3px solid var(--accent-color);
+}
+
+footer p {
+    color: var(--light-color);
+}
 /* AI Disclosure
 Prompt sent to my AI of choosing, which was Claude AI:
 I have an exisiting CSS file with multiple properities for a website of a portfolio of myself. 

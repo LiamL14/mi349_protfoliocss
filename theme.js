@@ -8,9 +8,9 @@ function setTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
 
     if(theme === "dark") {
-        themeButton.textContent = "Switch to Light Mode";
+        themeButton.textContent = "Light Mode";
     } else {
-        themeButton.textContent = "Switch to Dark Mode";
+        themeButton.textContent = "Dark Mode";
     }
 }
 
