@@ -22,3 +22,13 @@ function handleThemeClick() {
     }
     localStorage.setItem("theme", currentTheme);
 }
+
+if (savedTheme === "dark" || savedTheme === "light") {
+    setTheme(savedTheme);
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    setTheme("dark");
+} else {
+    setTheme("light");
+}
+ 
+themeButton.addEventListener("click", handleThemeClick);
